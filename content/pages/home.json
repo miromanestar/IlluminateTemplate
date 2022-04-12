@@ -1,0 +1,56 @@
+{
+  "top_subtitle": "consectetur adipiscing elit",
+  "bottom_subtitle": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+  "show_social": true,
+  "hero_image": "https://picsum.photos/1920/1080",
+  "subtitle": "test",
+  "title": "Lorem Ipsum",
+  "features": [
+    {
+      "title": "Social Media",
+      "description": "Marketing across multiple platforms with a focus on customer visibility",
+      "icon": "public"
+    },
+    {
+      "title": "Graphic Design",
+      "description": "Posters, social media posts, flyers, we design it all",
+      "icon": "brush"
+    },
+    {
+      "title": "Marketing",
+      "description": "With a personal touch we enhance a company's marketability",
+      "icon": "corporate_fare"
+    },
+    {
+      "title": "Business Connections",
+      "description": "Local businesses and community networks are at our finger tips",
+      "icon": "business_center"
+    }
+  ],
+  "team": [
+    {
+      "name": "Jane Doe",
+      "title": "Project Manager",
+      "image": "https://i.pravatar.cc/300",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+      "name": "John Doe",
+      "title": "Project Manager",
+      "image": "https://i.pravatar.cc/300",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+      "name": "Joan Doe",
+      "title": "Client Relations",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "image": "https://i.pravatar.cc/300"
+    },
+    {
+      "name": "Josh Doe",
+      "title": "Client Services",
+      "image": "https://i.pravatar.cc/300",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    }
+  ]
+}

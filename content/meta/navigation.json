@@ -1,0 +1,19 @@
+{
+  "logo": "/images/uploads/placeholder_logo.png",
+  "links": [
+    {
+      "name": "Home",
+      "url": "/"
+    },
+    {
+      "name": "About",
+      "url": "/about"
+    },
+    {
+      "name": "Contact",
+      "url": "/contact"
+    }
+  ],
+  "header_label": "Template",
+  "show_label": true
+}

@@ -1,0 +1,164 @@
+backend:
+  name: git-gateway
+  branch: main
+  repo: miromanestar/IlluminateWebsite
+  use_large_media_transforms_in_media_library: false
+
+publish_mode: editorial_workflow
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "pages"
+    format: "json"
+    extension: "json"
+    label: "Pages"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - file: "content/pages/home.json"
+        label: "Home"
+        name: "home-page"
+        fields:
+          - { label:  Top Subtitle, name: top_subtitle, widget: string }
+          - { label:  Bottom Subtitle, name: bottom_subtitle, widget: string }
+          - { label:  Title, name: title, widget: string }
+          - { label:  Hero Image, name: hero_image, widget: image }
+          - { label:  Show Social Media, name: show_social, default: true, widget: boolean }
+          - label: "Features Showcase"
+            name: "features"
+            widget: "list"
+            max: 4
+            fields:
+              - { label:  Title, name: title, widget: string }
+              - { label:  Description, name: description, widget: string }
+              - { label:  Icon, name: icon, widget: string, hint: "[Click here to view available icons](https://marella.me/material-design-icons/demo/font/)"  }
+          - label: "Video Card"
+            name: "video_card"
+            widget: "object"
+            fields:
+              - { label:  Video URL, name: video_url, widget: string }
+              - { label:  Description, name: description, widget: text }
+          - label: "Team Showcase"
+            name: "team"
+            widget: "list"
+            label_singular: "member"
+            fields:
+              - { label:  Name, name: name, widget: string }
+              - { label:  Title, name: title, widget: string }
+              - { label:  Description, name: description, widget: string }
+              - { label:  Image, name: image, widget: image }
+      - file: "content/pages/offers.json"
+        label: "Offers"
+        name: "offers-page"
+        fields:
+          - label: "Offers"
+            name: "offers"
+            widget: "list"
+            fields:
+              - { label:  Title, name: title, widget: string }
+              - { label:  Price, name: price, widget: string }
+              - label: "Features"
+                name: "features"
+                hint: "Comma-separated values"
+                widget: "list"
+      - file: "content/pages/about.json"
+        label: "About"
+        name: "about-page"
+        fields:
+          - { label:  Title, name: title, widget: string }
+          - { label:  Subtitle, name: subtitle, widget: text }
+          - { label:  Content, name: content, widget: text }
+          - label: "Images"
+            name: "images"
+            widget: "list"
+            fields:
+              - { label:  Description, name: description, widget: string }
+              - { label:  Image, name: image, widget: image }
+          - label: "Quotes"
+            name: "quotes"
+            widget: "list"
+            fields:
+              - { label:  Name, name: name, widget: string }
+              - { label:  Subtitle, name: subtitle, widget: string }
+              - { label:  Content, name: content, widget: text }
+              - { label:  Icon, name: icon, widget: string, hint: "[Click here to view available icons](https://marella.me/material-design-icons/demo/font/)" }
+      - file: "content/pages/contact.json"
+        label: "Contact"
+        name: "contact-page"
+        fields:
+          - { label: Header, name: header, widget: string }
+          - { label:  Welcome, name: welcome, widget: string }
+          - { label:  Address, name: address, widget: string }
+          - { label:  Phone, name: phone, widget: string }
+          - { label:  Email, name: email, widget: string }
+          - { label:  "Background Image", name: background_image, widget: image }
+
+  - name: "meta"
+    format: "json"
+    extension: "json"
+    label: "Meta"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - file: "content/meta/social.json"
+        label: "Social Media"
+        name: "social-media"
+        hint: "Add social media links here"
+        fields:
+          - { label: Instagram, name: instagram, required: false, widget: string }
+          - { label: Facebook, name: facebook, required: false, widget: string }
+          - { label: Twitter, name: twitter, required: false, widget: string }
+          - { label: Youtube, name: youtube, required: false, widget: string }
+          - { label: LinkedIn, name: linkedin, required: false, widget: string }
+      - file: "content/meta/navigation.json"
+        label: "Navigation"
+        name: "navigation"
+        fields:
+          - label: "Logo"
+            name: "logo"
+            widget: "image"
+          - label: "Header Label"
+            name: "header_label"
+            widget: "string"
+          - label: "Show label"
+            name: "show_label"
+            default: true
+            widget: "boolean"
+          - label: "Links"
+            name: "links"
+            widget: "list"
+            fields:
+              - { label:  Name, name: name, widget: string }
+              - { label:  URL, name: url, widget: string }
+      - file: "content/meta/theme.json"
+        label: "Theme"
+        name: "theme"
+        fields:
+          - label: "Palette"
+            name: "palette"
+            widget: "object"
+            fields:
+              - { label:  Primary, name: primary, allowInput: true, enableAlpha: true, widget: color }
+              - { label:  Secondary, name: secondary, allowInput: true, enableAlpha: true, widget: color }
+              - { label:  Muted White, name: muted_white, allowInput: true, enableAlpha: true, widget: color }
+              - { label:  Muted Text, name: muted_text, allowInput: true, enableAlpha: true, widget: color }
+              - { label:  Muted Text Alt, name: muted_text2, allowInput: true, enableAlpha: true, widget: color }
+          - label: "Gradients"
+            name: "gradients"
+            widget: "object"
+            fields:
+              - { label:  "Dark Gradient", name: dark_gradient, widget: string }
+          - label: "Box Shadows"
+            name: "box_shadows"
+            widget: "object"
+            fields:
+              - { label:  "Light", name: light, widget: string }
+              - { label:  "Feather", name: feather, widget: string }
+          - label: "Misc"
+            name: "misc"
+            widget: "object"
+            fields:
+              - { label: "Header Image", name: header_image, widget: image }
